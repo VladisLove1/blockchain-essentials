@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-var test = {
+let test = {
     t1: 'AJAX is',
     t2: 'great'
 };

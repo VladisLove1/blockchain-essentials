@@ -18,8 +18,7 @@
         function contactServer() {
             let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
-                var test = JSON.parse(this.responseText)
-
+                let test = JSON.parse(this.responseText);
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("response").innerHTML = test.t1 + ' ' + test.t2;
                 }
