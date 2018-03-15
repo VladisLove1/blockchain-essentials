@@ -9,8 +9,24 @@
 </head>
 <body>
     <div>
-        <h1>Hello from the Server</h1>
-        <h3>express-js web server inited</h3>
+        <h1 id="response">No response</h1>
+
+        <button onclick="contactServer()">Contact the webserver</button>
     </div>
+
+    <script>
+        function contactServer() {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                var test = JSON.parse(this.responseText)
+
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("response").innerHTML = test.t1 + ' ' + test.t2;
+                }
+            };
+            xhttp.open("GET", "ajax-request", true);
+            xhttp.send();
+        }
+    </script>
 </body>
 </html>
