@@ -18,9 +18,9 @@
         function contactServer() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
-                var test = JSON.parse(this.responseText);
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("response").innerHTML = test.t1 + ' ' + test.t2;
+                    var accounts = JSON.parse(this.responseText);
+                    document.getElementById("response").innerHTML = accounts[0] + '\n' + accounts[1];
                 }
             };
             xhttp.open("GET", "ajax-request", true);
