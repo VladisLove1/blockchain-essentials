@@ -1,7 +1,8 @@
+/*
 const express = require('express');
 const app = express();
 
-let test = {
+var test = {
     t1: 'AJAX is',
     t2: 'great'
 };
@@ -15,5 +16,6 @@ app.get('/ajax-request', (req, res) => {
 });
 
 app.listen(3000);
+*/
 
 //console.log(__dirname);
